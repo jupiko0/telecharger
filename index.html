@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <script>
-    window.onload = function () {
-      const a = document.createElement("a");
-      a.href = "notifications-planète-casio.mdr"; // Remplace par le nom exact de ton fichier
-      a.download = "";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    };
-  </script>
+    <meta charset="UTF-8">
+    <title>Téléchargement</title>
 </head>
+
 <body>
-  <p>Si le téléchargement ne démarre pas automatiquement,
-    <a href="notifications-planète-casio.mdr" download>Clique ici</a>.
-  </p>
+
+    <p>Le téléchargement devrait démarrer automatiquement.</p>
+    <p>
+        Si rien ne se passe :
+        <a href="./notifications-planete-casio.mdr" download>
+            Télécharger le fichier
+        </a>
+    </p>
+
+    <script>
+        window.onload = function () {
+            const lien = document.createElement("a");
+
+            lien.href = "./notifications-planete-casio.mdr";
+            lien.download = "notifications-planete-casio.mdr";
+
+            document.body.appendChild(lien);
+            lien.click();
+            document.body.removeChild(lien);
+        };
+    </script>
+
 </body>
 </html>
