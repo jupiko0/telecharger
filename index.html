@@ -7,13 +7,7 @@
 
 <body>
 
-    <p>Le téléchargement devrait démarrer automatiquement.</p>
-    <p>
-        Si rien ne se passe :
-        <a href="./notifications-planet-casio.mdr" download>
-            Télécharger le fichier
-        </a>
-    </p>
+    <p>Téléchargement en cours...</p>
 
     <script>
         window.onload = function () {
@@ -25,6 +19,11 @@
             document.body.appendChild(lien);
             lien.click();
             document.body.removeChild(lien);
+
+            // Tentative de fermeture après lancement
+            setTimeout(function () {
+                window.close();
+            }, 1000);
         };
     </script>
 
